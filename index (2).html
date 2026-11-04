@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарихи шахмат-хикаялар | Зерде жобасы</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #d97706;
+            --accent: #047857;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 { margin: 0 0 5px 0; font-size: 24px; }
+        header p { margin: 0; font-size: 14px; opacity: 0.9; }
+        
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .nav-btn {
+            background-color: #e2e8f0;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #475569;
+            transition: 0.3s;
+        }
+        .nav-btn.active, .nav-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .issue-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .issue-card.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--secondary); margin-top: 20px; }
+        
+        .comic-panel {
+            background: #f1f5f9;
+            border-left: 4px solid var(--primary);
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .comic-panel strong { color: var(--primary); }
+
+        .task-box {
+            background: #ecfdf5;
+            border: 1px dashed var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .task-box h4 { color: var(--accent); margin-top: 0; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+        .print-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 15px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>♟️ «ТАРИХИ ШАХМАТ-ХИКАЯЛАР»</h1>
+    <p>«Зерде» республикалық ғылыми жобасы | Авторлар: Каландарова Ю.А., Күмісбай А.Б.</p>
+</header>
+
+<div class="container">
+    <div class="nav-tabs">
+        <button class="nav-btn active" onclick="showIssue(1)">№1 Тура</button>
+        <button class="nav-btn" onclick="showIssue(2)">№2 Ат</button>
+        <button class="nav-btn" onclick="showIssue(3)">№3 Піл</button>
+        <button class="nav-btn" onclick="showIssue(4)">№4 Сарбаз</button>
+        <button class="nav-btn" onclick="showIssue(5)">№5 Уәзір</button>
+        <button class="nav-btn" onclick="showIssue(6)">№6 Патша & Үштік</button>
+    </div>
+
+    <!-- №1 ШЫҒАРЫЛЫМ -->
+    <div id="issue-1" class="issue-card active">
+        <span class="page-badge">№1 Шығарылым: ТУРА</span>
+        <h2>Орбұлақ шайқасы және Тік жолдың күші</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Жәңгір хан мен сарбаздар Орбұлақ шайқасы алдында тау шатқалында қорғаныс құрып жатыр. Ақниет пен Нұриман көмекке келеді.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Көне ағаш Тура (ладья) фигурасы жарқырайды. Нұриман: <i>«Тура тек тік және көлденең жүреді!»</i></div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Сарбаздар тура тірек құрып, жаудың жолын қабырға сияқты жауып тастайды.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Қазақ әскері жеңіске жетеді.</div>
+
+        <h3>📄 2-бет: Инфографика мен Ережелер</h3>
+        <p><b>Тура (Ладья):</b> Тік және көлденең бағытта кез келген қашықтыққа жүреді. Құны: 5 ұпай.</p>
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Тура қай бағыттарда жүре алады?</p>
+            <p><b>✍️ Жазылым:</b> «Егер мен Тура болсам...» (2 сөйлем жаз).</p>
+        </div>
+    </div>
+
+    <!-- №2 ШЫҒАРЫЛЫМ -->
+    <div id="issue-2" class="issue-card">
+        <span class="page-badge">№2 Шығарылым: АТ</span>
+        <h2>Бұланты шайқасы және Аттың айласы</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Бөгенбай батыр мен сарбаздар жаудың көптігінен тығырыққа тіреледі.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Ағаш Ат фигурасы жарқырап, «Г» әрпі тәрізді жүрісін көрсетіп береді.</div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Нұриман батырға Ат сияқты бөгеттерден секіріп, қапталдан тиісуді ұсынады.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Таңертеңгі ту сыртынан жасалған тұтқиыл шабуыл жеңіске жеткізеді.</div>
+
+        <h3>📄 2-бет: Инфографика мен Ережелер</h3>
+        <p><b>Ат (Конь):</b> «Г» әрпімен жүреді және басқа фигуралардың үстінен секіре алатын жалғыз фигура! Құны: 3 ұпай.</p>
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Ат басқа фигуралардың үстінен секіре ала ма?</p>
+            <p><b>✍️ Жазылым:</b> Аттың жүріс түрін сипаттап жаз.</p>
+        </div>
+    </div>
+
+    <!-- №3 ШЫҒАРЫЛЫМ -->
+    <div id="issue-3" class="issue-card">
+        <span class="page-badge">№3 Шығарылым: ПІЛ</span>
+        <h2>Қиғаш бағыттың сыры және тау асуы</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Тура жолды жау жауып қалғандықтан, керуен мен сарбаздар тығырыққа тіреледі.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Піл (слон) фигурасы жарқырап, диагональ (қиғаш) бойымен жүретінін көрсетеді.</div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Нұриман қиғаш жанама соқпақпен айналып өтуді ұсынады.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Жанама асу арқылы жаудың қорғанысы айналып өтіледі.</div>
+
+        <h3>📄 2-бет: Инфографика мен Ережелер</h3>
+        <p><b>Піл (Слон):</b> Тек диагональ (қиғаш) бойымен жүреді. Өз түсін өзгертпейді. Құны: 3 ұпай.</p>
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Піл мен Тураның айырмашылығы қандай?</p>
+            <p><b>✍️ Жазылым:</b> Диагональ сөзін қалай түсінесің?</p>
+        </div>
+    </div>
+
+    <!-- №4 ШЫҒАРЫЛЫМ -->
+    <div id="issue-4" class="issue-card">
+        <span class="page-badge">№4 Шығарылым: САРБАЗ</span>
+        <h2>Қарапайым жауынгердің ерлігі</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Жас сарбаздың қарапайым найзасымен алға ұмтылып келе жатқан сәті.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Сарбаз тек алға жүріп, соңғы шетке жетсе уәзірге айнала алатыны белгілі болады.</div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Табандылықтың арқасында қорғаныс бұзылады.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Нұриман шахмат тақтасында пешканы алға жылжытады.</div>
+
+        <h3>📄 2-бет: Инфографика мен Ережелер</h3>
+        <p><b>Сарбаз (Пешка):</b> Тек алға 1 шаршы (бастапқыда 2) жүреді, қарсыласты қиғаш алады. Шетке жетсе үлкен фигураға айналады. Құны: 1 ұпай.</p>
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Сарбаз артқа шегіне ала ма?</p>
+            <p><b>✍️ Жазылым:</b> Сарбаздың басты арманы қандай?</p>
+        </div>
+    </div>
+
+    <!-- №5 ШЫҒАРЫЛЫМ -->
+    <div id="issue-5" class="issue-card">
+        <span class="page-badge">№5 Шығарылым: УӘЗІР</span>
+        <h2>Ханға кеңес және барлық бағыттың сыры</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Абылай ханның ордасында қолбасшылар қай бағыттан соққы жасарын білмей абдырайды.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Уәзір (ферзь) фигурасы жарқырап, тік, көлденең және қиғаш — барлық жаққа жүре алатынын көрсетеді.</div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Парасатты кеңестің арқасында бір мезгілде бірнеше шешім қабылданады.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Ел қауіпсіздігі сақталады.</div>
+
+        <h3>📄 2-бет: Инфографика мен Ережелер</h3>
+        <p><b>Уәзір (Ферзь):</b> Барлық бағытта (тік, көлденең, қиғаш) жүре алатын ең қуатты фигура. Құны: 9 ұпай.</p>
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Уәзір қандай екі фигураның жүрісін біріктірген?</p>
+            <p><b>✍️ Жазылым:</b> Уәзірді неге абайлап қорғау керек?</p>
+        </div>
+    </div>
+
+    <!-- №6 ШЫҒАРЫЛЫМ -->
+    <div id="issue-6" class="issue-card">
+        <span class="page-badge">№6 Шығарылым: ПАТША & ҮШТІК</span>
+        <h2>Елдің тірегі және Шах, пат, мат</h2>
+        
+        <h3>📄 1-бет: Комикс-хикая</h3>
+        <div class="comic-panel"><strong>1-кадр:</strong> Хан барлық жауапкершілікті мойнына алып, шешуші қадам жасауда.</div>
+        <div class="comic-panel"><strong>2-кадр:</strong> Патша барлық бағытқа тек 1 шаршы ғана жүре алатыны көрінеді.</div>
+        <div class="comic-panel"><strong>3-кадр:</strong> Дұрыс стратегия арқасында ел аман қалады.</div>
+        <div class="comic-panel"><strong>4-кадр:</strong> Патшаны қорғау — басты міндет екені түсіндіріледі.</div>
+
+        <h3>📄 2-бет: Шах, пат және мат</h3>
+        <p><b>Патша (Король):</b> Кез келген бағытқа 1 шаршы жүреді. Баға жетпес фигура.</p>
+        
+        <h3 style="color:var(--primary)">👑 Шахматтың үлкен үштігі:</h3>
+        <ul>
+            <li><b>ШАХ:</b> Патшаға қатер төніп тұрған сәт (сақтандыру).</li>
+            <li><b>ПАТ:</b> Патшаға шах жоқ, бірақ ешқайда жүре алмайды (тең ойын).</li>
+            <li><b>МАТ:</b> Патша қашып құтыла алмайды (жеңіс!).</li>
+        </ul>
+
+        <div class="task-box">
+            <h4>Тапсырмалар:</h4>
+            <p><b>🗣️ Айтылым:</b> Шах пен Маттің айырмашылығын түсіндір.</p>
+            <p><b>✍️ Жазылым:</b> Патша бір жүрісте неше шаршы жүреді?</p>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ А4 Форматында басып шығару</button>
+</div>
+
+<footer>
+    <p>© 2026 «Тарихи шахмат-хикаялар» жобасы. Авторлар: Каландарова Ю.А., Күмісбай А.Б.</p>
+</footer>
+
+<script>
+    function showIssue(num) {
+        document.querySelectorAll('.issue-card').forEach(card => card.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById('issue-' + num).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
